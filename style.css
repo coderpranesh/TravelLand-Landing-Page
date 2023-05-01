@@ -7,7 +7,6 @@
 
 }
 header {
-    /* background-image: url("Rectangle 31.png"); */
     background-image: url("pexels-michal-marek-1774389.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -28,6 +27,7 @@ h4{
     color: #ececec;
     font-size : 1.125rem;
     font-weight: 400;
+    user-select: none;
 }
 .list ul{
     display: flex;
@@ -39,7 +39,7 @@ h4{
     list-style: none;
     color: #ececec;
 }
-li + li {
+.liGap + .liGap {
     margin-left: 2em;
 }
 a{ 
@@ -69,22 +69,22 @@ a{
     max-width: 750px;
     font-size: 3rem;
     font-weight: 900;
+    user-select: none;
 }
 /* ------------------------------ */
 h2 {
+    font-family: 'Gelasio', serif;
     margin: 1em 0;
     text-align: center;
-
+    font-size: 2rem;
+    text-align: center;
 }
 #pdescription {
     text-align: center;
     margin: 0 auto;
     max-width: 80%;
     margin-bottom: 3em;
-}
-#popularHeading {
-    font-family: 'Gelasio', serif;
-    font-size: 1.5rem;
+    font-weight: 500;
 }
 .row {
     display: flex;
@@ -131,7 +131,7 @@ h2 {
 	background-color: #151515;
 	color: #666873;
 	/* Margin-top: auto; for demo use only */
-	margin-top: auto;
+	/* margin-top: auto; */
 }
 .footer__container {
 	max-width: 1160px;
@@ -155,10 +155,11 @@ h2 {
 	gap: 20px;
 }
 .footer__list-link {
-	transition: color 0.25s;
+    color: #666873;
+	transition: all 1s;
 }
 .footer__list-link:hover {
-	color: #fff;
+	color: blue;
 }
 .footer__divider {
 	margin-block: 25px;
@@ -167,9 +168,10 @@ h2 {
 }
 .footer__bottom {
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	gap: 20px;
 	flex-wrap: wrap;
+    user-select: none;
 }
 .footer__list--bottom {
 	flex-direction: row;
