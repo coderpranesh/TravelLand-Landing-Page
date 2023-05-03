@@ -11,6 +11,7 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    /* width: 100%; */
     /* margin: 0 auto; */
 }
 .container {
@@ -91,9 +92,20 @@ h2 {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    height: 500px;
+    gap: 2rem;
 }
 .col {
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 3px );
+    -webkit-backdrop-filter: blur( 3px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
     text-align: center;
+    width: 300px;
+    transition: all 300ms ease-in-out;
+    padding-top: 10px;
 }
 .col h3 {
     font-family: 'Gelasio', serif;
@@ -103,13 +115,24 @@ h2 {
     width: 250px;
     border-radius: 100px; 
 }
+.col:hover {
+    transform: scaleY(1.05);
+}
 /* ------------------------------------- */
 .gridRow {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    place-items: center;
     grid-gap: 1rem;
+    height: 400px;
 }
 .box {
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 3px );
+    -webkit-backdrop-filter: blur( 3px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
     margin: 0 auto;
     overflow-x:hidden;
 }
@@ -123,6 +146,120 @@ h2 {
 .wrapper {
     margin-bottom: 10%;
 }
+/* ------------------------------- */
+.actionCon {
+    overflow:hidden;
+    width:100vw;
+    height: 200px;
+     }
+.actionType7 {
+    position:relative;
+    width: 160px;
+    height:100px;
+    /* margin:105px 350px; */
+    margin: 0 auto;
+    box-sizing:border-box;
+    overflow-x: hidden;
+}
+.actionType7 .pacman_1,
+.actionType7 .pacman_2 {
+    width:0;
+    height:0;
+    border-right:40px solid transparent;
+    border-top:40px solid #f1e156;
+    border-left:40px solid #f1e156;
+    border-bottom:40px solid #f1e156;
+    border-radius:50%;
+}
+.actionType7 .pacman_1 {
+    animation:ratatePacman1 .33s infinite;
+}
+.actionType7 .pacman_2 {
+    margin-top:-80px;
+    animation:ratatePacman2 .33s infinite;
+}
+.actionType7 .circle {
+    position:absolute;
+    top:50%;
+    right:-150px;
+    width:0;
+    height:0;
+    margin-top:-4px;
+    border:8px solid #f1e156;
+    border-radius:50%;
+    transform:translateX(0);
+    -webkit-transform:translateX(0);
+}
+.actionType7 .circle.item1 {
+    animation:circle 1s .33s linear infinite;
+    -webkit-animation:circle 1s .33s linear infinite;
+}
+.actionType7 .circle.item2 {
+    animation:circle 1s .66s linear infinite;
+    -webkit-animation:circle 1s .66s linear infinite;
+}
+.actionType7 .circle.item3 {
+    animation:circle 1s .99s linear infinite;
+    -webkit-animation:circle 1s .99s linear infinite;
+}
+.actionType7 .circle.item4 {
+    animation:circle 1s 1.32s linear infinite;
+    -webkit-animation:circle 1s 1.32s linear infinite;
+}
+@keyframes circle {
+   75% {
+    opacity:.6;
+}
+100%{
+   -webkit-transform:translateX(-200px);
+   transform:translateX(-200px);
+    opacity:0;
+}}
+@-webkit-keyframes circle {
+   75% {
+    opacity:.6;
+}
+100%{
+   -webkit-transform:translateX(-200px);
+   transform:translateX(-200px);
+    opacity:0;
+}}
+@keyframes ratatePacman1 {
+0%,100%{
+    transform:rotate(90deg);
+    -webkit-transform:rotate(90deg);
+}
+50%{
+    transform:rotate(0deg);
+    -webkit-transform:rotate(0deg);
+}}
+@keyframes ratatePacman1 {
+0%,100%{
+    transform:rotate(90deg);
+    -webkit-transform:rotate(90deg);
+}
+50%{
+    transform:rotate(0deg);
+    -webkit-transform:rotate(0deg);
+}}
+@keyframes ratatePacman2 {
+0%,100%{
+    transform:rotate(-90deg);
+    -webkit-transform:rotate(-90deg);
+}
+50%{
+    transform:rotate(0deg);
+    -webkit-transform:rotate(0deg);
+}}
+@-webkit-keyframes ratatePacman2 {
+0%,100%{
+    transform:rotate(-90deg);
+    -webkit-transform:rotate(-90deg);
+}
+50%{
+    transform:rotate(0deg);
+    -webkit-transform:rotate(0deg);
+}}
 /* ---------------------------------- */
 .footer {
 	padding-block: 50px;
@@ -176,3 +313,9 @@ h2 {
 	flex-direction: row;
 }
 
+.footer__list-item{
+    transition: all 200ms linear;
+}
+.footer__list-item:hover {
+    transform: scaleX(0.9)
+}
